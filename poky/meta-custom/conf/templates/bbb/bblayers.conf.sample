@@ -1,0 +1,14 @@
+LCONF_VERSION = "7"
+
+BBLAYERS ?= " \
+  ${TOPDIR}/../poky/meta \
+  ${TOPDIR}/../poky/meta-poky \
+  ${TOPDIR}/../poky/meta-yocto-bsp \
+  ${TOPDIR}/../poky/meta-arm/meta-arm \
+  ${TOPDIR}/../poky/meta-arm/meta-arm-toolchain \
+  ${TOPDIR}/../poky/meta-ti/meta-ti-bsp \
+  ${TOPDIR}/../poky/meta-ti/meta-ti-extras \
+  ${TOPDIR}/../poky/meta-openembedded/meta-oe \
+  ${TOPDIR}/../poky/meta-openembedded/meta-python \
+  ${TOPDIR}/../poky/meta-openembedded/meta-networking \
+  "

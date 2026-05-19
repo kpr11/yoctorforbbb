@@ -12,3 +12,6 @@ libsdl1.2-dev xterm tar
 
 sudo apt install python3-distutils
 
+sudo apt install liblz4-tool -y
+sudo apt install locales -y
+sudo locale-gen en_US.UTF-8

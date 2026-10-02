@@ -68,15 +68,20 @@ PREFERRED_PROVIDER_virtual/kernel = "${KERNEL_PROVIDER}"
 
 BB_NUMBER_THREADS ?= "\${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j \${@oe.utils.cpu_count()}"
-# === END GENERATED KERNEL CONFIG ===
 EOL
 
 if [ "$choice" = "2" ]; then
     cat >> conf/local.conf << EOL
 PREFERRED_VERSION_linux-mainline = "7.0%"
 KERNEL_DEVICETREE = "ti/omap/am335x-bone.dtb ti/omap/am335x-boneblack.dtb"
+# WIC must only request device trees built by linux-mainline.
+DTB_FILES:beaglebone-yocto = "am335x-bone.dtb am335x-boneblack.dtb"
 EOL
 fi
+
+cat >> conf/local.conf << EOL
+# === END GENERATED KERNEL CONFIG ===
+EOL
 
 echo ""
 echo "===================================================="

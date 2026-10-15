@@ -11,7 +11,7 @@ IMAGE_INSTALL:append = " \
     i2c-tools usbutils pciutils dtc \
     memtester stress-ng \
 "
-IMAGE_FEATURES:append = " tools-debug dbg-pkgs"
+IMAGE_FEATURES:append = " tools-debug dbg-pkgs ssh-server-dropbear"
 
 # Explicit opt-in after resolving the prerequisites in DEBUGGING.md.
 # tools-profile also pulls in SystemTap and LTTng in this checkout.

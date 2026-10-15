@@ -72,7 +72,7 @@ EOL
 
 if [ "$choice" = "2" ]; then
     cat >> conf/local.conf << EOL
-PREFERRED_VERSION_linux-mainline = "7.0%"
+PREFERRED_VERSION_linux-mainline = "7.2.9"
 KERNEL_DEVICETREE = "ti/omap/am335x-bone.dtb ti/omap/am335x-boneblack.dtb"
 # WIC must only request device trees built by linux-mainline.
 DTB_FILES:beaglebone-yocto = "am335x-bone.dtb am335x-boneblack.dtb"
